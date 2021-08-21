@@ -15,7 +15,7 @@ public class CurrentAccount {
 
     private Customer customer;
 
-    private String cardNumber;
+    private String accountNumber;
 
     private List<Person> holders;
 
@@ -29,5 +29,5 @@ public class CurrentAccount {
 
     private Double balance;
 
-    private LocalDateTime date;
+    private LocalDateTime date; 
 }
