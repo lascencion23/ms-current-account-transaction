@@ -29,5 +29,5 @@ public class CurrentAccount {
 
     private Double balance;
 
-    private LocalDateTime date;
+    private LocalDateTime date; 
 }
