@@ -30,6 +30,11 @@ public class TransactionCurrentAccountController {
         return transactionCurrentAccountService.findById(id);
     }
 
+    @GetMapping("/findByCurrentAccountId/{id}")
+    public Flux<TransactionCurrentAccount> findByCurrentAccountId(String id){
+    	return transactionCurrentAccountService.findByCurrentAccountId(id);
+    }
+    
     @PostMapping("/create")
     public Mono<ResponseEntity<TransactionCurrentAccount>> create(@RequestBody TransactionCurrentAccount transaction){
         // VERIFICAMOS SI EXISTE EL CLIENTE

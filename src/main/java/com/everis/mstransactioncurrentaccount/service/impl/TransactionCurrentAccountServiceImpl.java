@@ -54,7 +54,14 @@ public class TransactionCurrentAccountServiceImpl implements TransactionCurrentA
   		return currentAccount;
   	}
     
-    
+	@Override
+	public Flux<TransactionCurrentAccount> findByCurrentAccountId(String id) {
+		return transactionCurrentAccountRepository.findByCurrentAccountId(id);
+	}
+
+  	
+  	
+  	
     @Override
     public Mono<TransactionCurrentAccount> create(TransactionCurrentAccount t) {
         return transactionCurrentAccountRepository.save(t);
@@ -86,6 +93,7 @@ public class TransactionCurrentAccountServiceImpl implements TransactionCurrentA
     public Mono<Long> countMovements(String t) {
         return transactionCurrentAccountRepository.findByCurrentAccountId(t).count();
     }
+
 
 
 }
